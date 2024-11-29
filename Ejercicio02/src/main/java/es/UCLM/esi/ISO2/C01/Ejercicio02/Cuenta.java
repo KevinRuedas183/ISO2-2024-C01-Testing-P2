@@ -3,24 +3,20 @@ package es.UCLM.esi.ISO2.C01.Ejercicio02;
 /**
  * Hello world!
  */
-public class App {
-    public static void main(String[] args) {
-    	
-    	int edad = 0;
-    	boolean trabaja;
-    	boolean estudia;
-    	boolean vivePadres;
+public class Cuenta {
+    public String determinar_cuenta(Cliente c) {
+
     	String cuenta = "";
     	
-    	if(edad<18 && estudia==true && vivePadres==true) {
+    	if(c.getEdad()<18 && c.isEstudia()==true && c.isVivePadres()==true) {
     		cuenta = "Cuenta confort";
     	}
     	
-    	else if(edad<25 && estudia==true && vivePadres==false) {
+    	else if(c.getEdad()<25 && c.isEstudia()==true && c.isVivePadres()==false) {
     		cuenta = "Cuenta Vamos que tu puedes";
     	}
     	
-    	else if(edad>28 && trabaja==true && vivePadres==true) {
+    	else if(c.getEdad()>18 && c.isTrabaja()==true && c.isVivePadres()==true) {
     		cuenta = "Cuenta ahorra ahora que pudes";
     	}
     	
@@ -28,17 +24,17 @@ public class App {
     		cuenta = "Saltando del nido";
     	}
     	
-    	if(edad>25 && trabaja==true && vivePadres==true) {
+    	if(c.getEdad()>25 && c.isTrabaja()==true && c.isVivePadres()==true) {
     		cuenta = "Cuenta independizate que va siendo hora";
     	}
     	
-    	else if(edad>25 && trabaja==true && vivePadres==false){
+    	else if(c.getEdad()>25 && c.isTrabaja()==true && c.isVivePadres()==false){
     		cuenta = "Cuenta bienvenido a la vida adulta";
     	}
     	
     	
     	
-    	
-        System.out.println("El tipo de cuenta es:" + cuenta);
+    	return cuenta;
+        
     }
 }
