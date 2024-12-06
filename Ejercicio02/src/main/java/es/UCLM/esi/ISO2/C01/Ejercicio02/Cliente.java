@@ -7,19 +7,30 @@ public class Cliente {
 	private boolean estudia;
 	private boolean vivePadres;
 		
-	public Cliente(int edad, boolean trabaja, boolean estudia, boolean vivePadres) {
-		super();
-		this.edad = edad;
-		this.trabaja = trabaja;
-		this.estudia = estudia;
-		this.vivePadres = vivePadres;
+	public Cliente(int edad, boolean trabaja, boolean estudia, boolean vivePadres) throws Exception{
+		try {
+			
+			setEdad(edad);
+			setTrabaja(trabaja);
+			setEstudia(estudia);
+			setVivePadres(vivePadres);
+			
+		} catch (Exception e){
+			throw new Exception(e);
+		}
 	}
 	
 	public int getEdad() {
 		return edad;
 	}
-	public void setEdad(int edad) {
-		this.edad = edad;
+	public void setEdad(int edad) throws Exception {
+		
+		if(getEdad()>0) {
+			this.edad = edad;
+		}
+		else {
+			throw new Exception("La edad debe ser un numero positivo");
+		}
 	}
 	public boolean isTrabaja() {
 		return trabaja;
@@ -30,13 +41,13 @@ public class Cliente {
 	public boolean isEstudia() {
 		return estudia;
 	}
-	public void setEstudia(boolean estudia) {
+	public void setEstudia(boolean estudia){
 		this.estudia = estudia;
 	}
 	public boolean isVivePadres() {
 		return vivePadres;
 	}
-	public void setVivePadres(boolean vivePadres) {
+	public void setVivePadres(boolean vivePadres){
 		this.vivePadres = vivePadres;
 	}
 	
