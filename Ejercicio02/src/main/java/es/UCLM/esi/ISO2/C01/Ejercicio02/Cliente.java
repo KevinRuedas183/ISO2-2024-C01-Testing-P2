@@ -25,7 +25,7 @@ public class Cliente {
 	}
 	public void setEdad(int edad) throws Exception {
 		
-		if(getEdad()>0) {
+		if(edad>0) {
 			this.edad = edad;
 		}
 		else {

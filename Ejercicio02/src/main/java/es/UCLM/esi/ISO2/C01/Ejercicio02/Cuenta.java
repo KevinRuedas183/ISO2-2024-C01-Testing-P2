@@ -37,6 +37,7 @@ public class Cuenta {
     			else {
     				//Caso 3.2
     				cuenta = "Cuenta Saltando del Nido";
+    				
     			}
     		}
     	}
